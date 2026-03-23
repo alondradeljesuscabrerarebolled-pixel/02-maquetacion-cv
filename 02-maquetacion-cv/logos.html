@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Logos - Alondra CV</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    padding: 20px;
+    background: linear-gradient(180deg, rgb(151, 46, 204), rgb(80, 20, 120));
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+/* BOTÓN FIJO */
+.btn-volver {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    padding: 10px 18px;
+    border: 2px solid white;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+    z-index: 1000;
+}
+
+.btn-volver:hover {
+    background: white;
+    color: purple;
+}
+
+/* HEADER */
+.page-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* GALERÍA */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* TARJETAS */
+.card {
+    background: rgba(210, 195, 195, 0.25);
+    border-radius: 16px;
+    overflow: hidden;
+    padding-bottom: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+/* TEXTO */
+.card p {
+    padding: 10px;
+    font-size: 0.9rem;
+}
+
+/* HOVER */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+.card:hover img {
+    transform: scale(1.05);
+}
+
+/* SECCIONES */
+section {
+    margin-bottom: 40px;
+}
+</style>
+</head>
+
+<body>
+
+<a href="index.html" class="btn-volver">Volver al menú</a>
+
+<div class="page-header">
+    <h1>Logos</h1>
+</div>
+
+<section id="Logos">
+
+<div class="gallery">
+
+<div class="card">
+<img src="img/ANOTA_LOGO.png" alt="Logo 1">
+<p>Logo para el emprendimiento de agendas personalizadas ANOTA, estilo minimalista y moderno.</p>
+</div>
+
+<div class="card">
+<img src="img/Lali_LOGO.jpeg" alt="Logo 2">
+<p>Re-diseño de logo para marca de repostería LAS DELICIAS DE LALI.</p>
+</div>
+
+<div class="card">
+<img src="img/DAYMA_LOGO.jpeg" alt="Logo 3">
+<p>Logo dinámico para negocio de comida.</p>
+</div>
+
+<div class="card">
+<img src="img/DAY.png" alt="Logo 4">
+<p>Logo dinámico para una sucursal de repostería.</p>
+</div>
+
+<div class="card">
+<img src="img/LOGO_PREVENCION.png" alt="Logo 5">
+<p>Logo para campaña de prevención y concientización.</p>
+</div>
+
+</div>
+
+</section>
+
+</body>
+</html>

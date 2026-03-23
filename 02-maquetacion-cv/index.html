@@ -4,182 +4,245 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV Alondra Cabrera Rebolledo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        nav:first-of-type {
+            background-color: black;
+            padding: 20px 40px;
+            border-radius: 12px;
+            font-size: 1.1rem;
+        }
+        nav:first-of-type ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+            gap: 100px;
+            justify-content: space-evenly;
+        }
+        nav:first-of-type a {
+            color: purple;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+        nav:first-of-type a:hover {
+            text-decoration: underline;
+        }
+        .intro-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin-top: 40px;
+            margin-bottom: 24px;
+            padding-top: 20px;
+        }
+        .intro-section .intro-img {
+            width: 360px;
+            height: 360px;
+            border-radius: 50%;
+            border: 12px solid black;
+            object-fit: cover;
+            margin: 0;
+        }
+        .intro-section .intro-text {
+            width: 48%;
+            color: rgb(255, 255, 255);
+        }
+        .intro-section .intro-text h1,
+        .intro-section .intro-text p {
+            margin: 0 0 1rem 0;
+        }
+        .intro-section .intro-text h1 {
+            font-family: 'Llegue Spartan', sans-serif;
+        }
+        .intro-section .intro-text p,
+        p {
+            font-family: 'Poppins', sans-serif;
+        }
+        .contacto {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-top: 12px;
+        }
+        .contacto-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 8px 12px;
+            border-radius: 8px;
+            transition: transform 0.2s ease, background-color 0.2s ease;
+        }
+        .contacto-link:hover {
+            transform: translateY(-1px);
+            background-color: #08010e33;
+        }
+        .contacto-icon {
+              width: 35px;
+              height: 35px;
+        }
+        .herramientas {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 20px;
+            position: fixed;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 10px 16px;
+            background-color: rgba(7, 1, 17, 0.6);
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+            z-index: 100;
+        }
+        .herramientas article {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background-color: rgba(13, 1, 18, 0.12);
+            border-radius: 10px;
+            padding: 6px 10px;
+        }
+        .herramientas article p {
+            color: white;
+         }
+        .herramientas article strong {
+            color: purple;
+        }
+        .icono-grande {
+            width: 80px;
+            height: 50px;
+        }
+        #Modelado3D .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 10px;
+            padding-bottom: 10px;
+        }
+        #Modelado3D .gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+        #Modelado3D .gallery img.alargada {
+            width: 100%;
+            height: 553px;
+            object-fit: cover;
+            grid-row: 2;
+        }
+        #Modelado3D .gallery img.mover-abajo {
+            grid-column: 1;
+            grid-row: 3;
+        }
+        #Logos .logos-gallery,
+        #Dibujos .drawings-gallery,
+        #FotografiasPublicitarias .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 10px;
+        }
+        #MiniComic .drawings-gallery {
+            display: flex;
+            flex-wrap: nowrap;
+            gap: 5px;
+            overflow-x: auto;
+            width: 30%;
+            padding-bottom: 10px;
+            margin: 0 auto;
+        }
+        #MiniComic .drawings-gallery img {
+            width: 90px;
+            height: auto;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+        #Logos .logos-gallery article,
+        #Dibujos .drawings-gallery article,
+        #FotografiasPublicitarias .gallery img {
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        #Logos .logos-gallery img,
+        #Dibujos .drawings-gallery img,
+        #FotografiasPublicitarias .gallery img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        #Modelado3D, #Logos, #Dibujos, #FotografiasPublicitarias {
+            background-color: rgba(0, 0, 0, 0.15);
+            border-radius: 12px;
+            padding: 18px;
+            margin: 16px 0;
+            border: 1px solid rgba(255, 255, 255, 0.35);
+        }
+        #Modelado3D h2, #Logos h2, #Dibujos h2, #FotografiasPublicitarias h2 {
+            font-size: 1.9rem;
+            font-weight: 700;
+            color: #fff;
+            text-align: center;
+            margin-bottom: 14px;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.45);
+        }
+
+    </style>
 </head>
 
-<body>
+<body style="background-color: rgb(151, 46, 204);">
     <section>
-        <nav>
+        <nav style="color: black;">
             <ul>
-                <li><a href="#Modelado3D">Modelado 3D</a></li>
-                <li><a href="#Logos">Logos</a></li>
-                <li><a href="#Dibujos">Dibujos</a></li>
-                <li><a href="#FotografiasPublicitarias">Fotografías Publicitarias</a></li>
+                <li><a href="contacto.html">Modelado 3D</a></li>
+                <li><a href="logos.html">Logos</a></li>
+                <li><a href="dibujo.html">Dibujos</a></li>
+                <li><a href="fotografia.html">Fotografías Publicitarias</a></li>
             </ul>
         </nav>
-       <img src="img/foto-presentacion.jpg" alt="foto de presentacion"> 
-       <h1>Alondra CV</h1>
-       <P>Ingeniera en Diseño Multimedia <strong>especializada en modelado 3D y animación 2D/3D.</strong> Cuento con habilidades en diseño digital y edición de video para la creación de contenido visual atractivo y funcional. Me destaco por mi creatividad, productividad y capacidad para desarrollar soluciones visuales innovadoras.</P>
-
+        <div class="intro-section">
+            <img class="intro-img" src="img/foto de precentacion.jpeg" alt="foto de presentacion">
+            <div class="intro-text">
+                <h1>Alondra Cabrera Rebolledo</h1>
+                <p>Ingeniera en Diseño Multimedia <strong>especializada en modelado 3D y animación 2D/3D.</strong> Cuento con habilidades en diseño digital y edición de video para la creación de contenido visual atractivo y funcional. Me destaco por mi creatividad, productividad y capacidad para desarrollar soluciones visuales innovadoras.</p>
+                <div class="contacto">
+                    <a class="contacto-link" href="mailto:alondradeljesuscabrerarebolled@gmail.com">
+                        <img class="contacto-icon" src="img/email.png" alt="Icono email" width="24" height="24">
+                        <span>Email</span>
+                    </a>
+                    <a class="contacto-link" href="https://www.instagram.com/almendra_c_r/?hl=es-la" target="_blank" rel="noopener noreferrer">
+                        <img class="contacto-icon" src="img/descarga.png" alt="Icono Instagram" width="24" height="24">
+                        <span>Instagram</span>
+                    </a>
+                </div>
+            </div>
+        </div>
        <div class="herramientas">
            <article>
-               <img src="img/icono-blender.png" alt="Ícono Blender" width="40" height="40">
-               <p><strong>Blender</strong> - Modelado 3D y animación.</p>
+               <img class="icono-grande" src="img/Blender-icono.png" alt="Ícono Blender" width="40" height="40">
+               <p><strong>Blender</strong>  Modelado 3D y animación.</p>
            </article>
            <article>
-               <img src="img/Canva-Logo.png" alt="Ícono Canva" width="40" height="40">
-               <p><strong>Canva</strong> - Diseño gráfico y publicidad.</p>
+               <img class="icono-ancho" src="img/Canva-Logo.png" alt="Ícono Canva" width="80" height="40">
+               <p><strong>Canva</strong>  Diseño gráfico y publicidad.</p>
            </article>
            <article>
-               <img src="img/capcut-icono.png" alt="Ícono CapCut" width="40" height="40">
-               <p><strong>CapCut</strong> - Edición de video rápida y creativa.</p>
+               <img class="icono-grande" src="img/capcut-icono.png" alt="Ícono CapCut" width="40" height="40">
+               <p><strong>CapCut</strong>  Edición de video rápida y creativa.</p>
            </article>
        </div>
     </section>
-
-    <section class="contacto">
-        <h2>Contacto</h2>
-        <ul>
-            <li><a href="mailto:Alondradeljesuscabrerarebolled@gmail.com">Email: Alondradeljesuscabrerarebolled@gmail.com</a></li>
-            <li><a href="https://www.instagram.com/almendra_c_r/?hl=es-la" target="_blank" rel="noopener noreferrer">Instagram DM</a></li>
-        </ul>
-    </section>
-
-    <section id="Modelado3D">
-        <h2>Modelados 3D</h2>
-        <div class="gallery">
-            <!-- GALERIA 3D -->
-            <img src="img/KUROMI SEGUNDA VISTA.png" alt="Modelado 1">
-            <img src="img/KURIMI render tarea.png" alt="Modelado 2">
-            <img src="img/CASA.png" alt="Modelado 3">
-            <img src="img/Cartel de Contaminacion.png" alt="Modelado 4">
-            <img src="img/Cartel tortuga 2.png" alt="Modelado 5">
-            <img src="img/Mar Render vista2.png" alt="Modelado 6">
-            <img src="img/MAR vista3.png" alt="Modelado 7">
-            <img src="img/Delfin_Delsi.png" alt="Modelado 8">
-        </div>
-    </section>
-
-    <section id="Logos">
-        <h2>Logos</h2>
-        <div class="logos-gallery">
-            <article>
-                <img src="img/ANOTA_LOGO.png" alt="Logo 1">
-                <p>Logo para el emprendimiento de agendas personalizadas ANOTA, estilo minimalista y moderno.</p>
-            </article>
-            <article>
-                <img src="img/Lali_LOGO.jpeg" alt="Logo 2">
-                <p>Re-diseño de logo para marca de reposteria LAS DELICIAS DE LALI.</p>
-            </article>
-            <article>
-                <img src="img/DAYMA_LOGO.jpeg" alt="Logo 3">
-                <p>Logo dinamico para negocio de comida.</p>
-            </article>
-            <article>
-                <img src="img/DAY.png" alt="Logo 4">
-                <p>Logo dinamico para una sucursal de reposteria.</p>
-            </article>
-            <article>
-                <img src="img/LOGO_PREVENCION.png" alt="Logo 5">
-                <p>Logo para campaña de prevención y concientización del suicidio.</p>
-            </article>
-        </div>
-    </section>
-
-    <section id="Dibujos">
-        <h2>Dibujos</h2>
-        <nav class="subnav">
-            <ul>
-                <li><a href="#MiniComic">Mini Comic</a></li>
-                <li><a href="#DibujoDigital">Dibujo Digital</a></li>
-                <li><a href="#DibujoTradicional">Dibujo Tradicional</a></li>
-            </ul>
-        </nav>
-
-        <section id="MiniComic">
-            <h3>Mini Comic</h3>
-            <div class="drawings-gallery">
-                <article>
-                    <p>Trabajo de boceto, color y renderizado en el mini comic <strong>HOLLOW KNIGHT</strong> EL viaje de la flor delicada.</p>
-                    <img src="img/VIÑETA_1.png" alt="Dibujo 1">
-                    <img src="img/VIÑETA_2.png" alt="Dibujo 2">
-                    <img src="img/VIÑETA_3.png" alt="Dibujo 3">
-                    <img src="img/VIÑETA_4.png" alt="Dibujo 4">
-                </article>
-            </div>
-        </section>
-
-        <section id="DibujoDigital">
-            <h3>Dibujo Digital</h3>
-            <div class="drawings-gallery">
-                <article>
-                    <img src="img/Personalizado.jpeg" alt="Dibujo 5">
-                    <p>Personaje original para uso en proyectos de ilustración.</p>
-                </article>
-                <article>
-                    <img src="img/background.png" alt="Dibujo 6">
-                    <p>Fondo para el corto animado <strong>Una Caminata Tranquila</strong>.</p>
-                </article>
-                <article>
-                    <img src="img/german_garcia.png" alt="Dibujo 7">
-                    <p>Dibujo conceptual para proyecto de animación.</p>
-                </article>
-            </div>
-        </section>
-
-        <section id="DibujoTradicional">
-            <h3>Dibujo Tradicional</h3>
-            <div class="drawings-gallery">
-                <article>
-                    <img src="img/Comicion.jpeg" alt="Dibujo 8">
-                    <p>Comisión de dibujo tradicional con lápices de colores para uso personal.</p>
-                </article>
-                <article>
-                    <img src="img/Retrato.jpeg" alt="Dibujo 9">
-                    <p>Dibujo tradicional de retrato con técnicas de sombreado a lápiz.</p>
-                </article>
-            </div>
-        </section>
-    </section>
-
-    <section id="FotografiasPublicitarias">
-        <h2>Fotografías Publicitarias</h2>
-        <nav class="subnav">
-            <ul>
-                <li><a href="#PublicidadComida">Publicidad para comida</a></li>
-                <li><a href="#PublicidadProducto">Publicidad para producto</a></li>
-                <li><a href="#PublicidadPersona">Publicidad para persona</a></li>
-            </ul>
-        </nav>
-
-        <section id="PublicidadComida">
-            <h3>Publicidad para comida</h3>
-            <div class="gallery">
-                <img src="img/sandwich_pavo.jpeg" alt="Publicidad comida 1">
-                <img src="img/sandwich.jpeg" alt="Publicidad comida 2">
-                <img src="img/torta_pavo.jpeg" alt="Publicidad comida 3">
-                <img src="img/consome.jpeg" alt="Publicidad comida 4">
-            </div>
-        </section>
-
-        <section id="PublicidadProducto">
-            <h3>Publicidad para producto</h3>
-            <div class="gallery">
-                <img src="img/publicidad_draco.jpeg" alt="Publicidad producto 1">
-                <img src="img/draco_miedo.jpeg" alt="Publicidad producto 2">
-                <img src="img/draco_orcuro.jpeg" alt="Publicidad producto 3">
-            </div>
-        </section>
-
-        <section id="PublicidadPersona">
-            <h3>Publicidad para persona</h3>
-            <div class="gallery">
-                <img src="img/unacar_publicidad.jpeg" alt="Publicidad persona 1">
-                <img src="img/publicidad_UNACAR.jpeg" alt="Publicidad persona 2">
-                <img src="img/jj_publicidad.jpeg" alt="Publicidad persona 3">
-            </div>
-        </section>
-    </section>
-
-
+ 
 </body>
 </html>

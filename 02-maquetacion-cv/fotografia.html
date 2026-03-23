@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+ <html lang="es">
+ <head>
+      <meta charset="UTF-8">
+     <title>Fotografías Publicitarias - Alondra CV</title>
+
+          <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+   <style>
+      body {
+       margin: 0;
+       padding: 20px;
+       background: linear-gradient(180deg, rgb(151, 46, 204), rgb(80, 20, 120));
+       font-family: 'Poppins', sans-serif;
+       color: white;
+      }
+
+/* BOTÓN FIJO */
+      .btn-volver {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        padding: 10px 18px;
+        border: 2px solid white;
+        border-radius: 10px;
+        color: white;
+       text-decoration: none;
+        transition: 0.3s;
+        z-index: 1000;
+        }
+
+.btn-volver:hover {
+    background: rgb(253, 253, 253);
+    color: rgb(94, 10, 94);
+}
+
+/* HEADER */
+.page-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* SUBNAV */
+.subnav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.subnav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 6px 12px;
+    border-radius: 7px;
+    transition: 0.3s;
+}
+
+.subnav a:hover {
+    background: rgb(0, 0, 0);
+    color: purple;
+}
+
+/* GALERÍA */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* TARJETAS */
+.card {
+    background: rgba(210, 195, 195, 0.25);
+    border-radius: 16px;
+    overflow: hidden;
+    padding-bottom: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+#PublicidadProducto .card img {
+    height: 260px;
+    object-fit: cover;
+    object-position: center top;
+}
+#PublicidadProducto .card:hover img {
+    transform: scale(1.15);
+}
+/* TEXTO */
+.card p {
+    padding: 10px;
+    font-size: 0.9rem;
+}
+
+/* HOVER */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+.card:hover img {
+    transform: scale(1.05);
+}
+
+/* SECCIONES */
+section {
+    margin-bottom: 40px;
+}
+
+h3 {
+    margin-bottom: 15px;
+}
+ #PublicidadProducto .card {
+    padding: 10px;
+}
+#PublicidadProducto .card img {
+    width: 100%;
+    height: auto;         /* mantiene proporción natural */
+    object-fit: contain;  /* no se recorta */
+}
+</style>
+</head>
+
+<body>
+
+<a href="index.html" class="btn-volver">Volver al menú</a>
+
+<div class="page-header">
+    <h1>Fotografías Publicitarias</h1>
+</div>
+
+<section id="FotografiasPublicitarias">
+
+<nav class="subnav">
+    <ul>
+        <li><a href="#PublicidadComida">Comida</a></li>
+        <li><a href="#PublicidadProducto">Producto</a></li>
+        <li><a href="#PublicidadPersona">Persona</a></li>
+    </ul>
+</nav>
+<!-- COMIDA -->
+        <section id="PublicidadComida">
+        <h3>Publicidad para comida</h3>
+     <div class="gallery">
+     <div class="card">
+      <img src="img/sandwich_pavo.jpeg">
+<p>Fotografía gastronómica.</p>
+</div>
+
+<div class="card">
+<img src="img/sandwich.jpeg">
+<p>Composición de producto.</p>
+</div>
+
+<div class="card">
+<img src="img/torta_pavo.jpeg">
+<p>Publicidad de alimentos.</p>
+</div>
+
+<div class="card">
+<img src="img/consome.jpeg">
+<p>Iluminación cálida.</p>
+</div>
+
+</div>
+</section>
+
+<!-- PRODUCTO -->
+<section id="PublicidadProducto">
+<h3>Publicidad para producto</h3>
+<div class="gallery">
+
+<div class="card">
+<img src="img/publicidad_draco.jpeg">
+<p>Estilo dramático.</p>
+</div>
+
+<div class="card">
+<img src="img/draco_miedo.jpeg">
+<p>Concepto oscuro.</p>
+</div>
+
+<div class="card">
+<img src="img/draco_orcuro.jpeg">
+<p>Iluminación creativa.</p>
+</div>
+
+</div>
+</section>
+
+<!-- PERSONA -->
+<section id="PublicidadPersona">
+<h3>Publicidad para persona</h3>
+<div class="gallery">
+
+<div class="card">
+<img src="img/unacar_publicidad.jpeg">
+<p>Retrato publicitario.</p>
+</div>
+
+<div class="card">
+<img src="img/jj_publicidad.jpeg">
+<p>Fotografía promocional.</p>
+</div>
+
+</div>
+</section>
+
+</section>
+
+</body>
+</html>

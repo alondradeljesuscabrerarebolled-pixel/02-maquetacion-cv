@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Modelado 3D</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(180deg, rgb(151, 46, 204), rgb(80, 20, 120));
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .btn-volver {
+          display: inline-block;
+          margin-bottom: 20px;
+       padding: 10px 18px;
+    border: 2px solid rgb(230, 219, 237);
+    border-radius: 10px;
+    color: rgb(250, 248, 250);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+       .btn-volver:hover {
+    background: white;
+    color: purple;
+}
+
+        #Modelado3D {
+            background-color: 0;
+            border-radius: 12px;
+            padding: 0;
+            margin: 40px;
+        }
+
+        #Modelado3D h2 {
+            font-size: 2rem;
+            font-weight: bold;
+            color: rgb(242, 240, 240);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        #Modelado3D .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            
+        }
+
+        .card {
+          background: rgba(210, 195, 195, 0.25);
+          border-radius: 16px;
+           overflow: hidden;
+         padding-bottom: 10px;
+         transition: transform 0.3s ease, box-shadow 0.3s ease;
+         }
+        .card img {
+           width: 100%;
+          height: 220px;
+         object-fit: cover;
+         display: block;
+         transition: transform 0.3s ease;
+        }
+
+        .card p {
+          color: white;
+          padding: 10px;
+          font-size: 0.9rem;
+        }
+
+         .card:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+        }
+
+/* ZOOM SOLO A LA IMAGEN */
+.card:hover img {
+    transform: scale(1.1);
+} 
+.card:nth-child(5) {
+    grid-column: span 2;
+}
+        #Modelado3D .gallery img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        #Modelado3D .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Imagen destacada (la tortuga) */
+        #Modelado3D .gallery img:nth-child(5) {
+            grid-column: span 2;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="btn-volver">Volver al menú</a>
+    <section id="Modelado3D">
+        <h2>Modelados 3D</h2>
+   <div class="gallery">
+     <article class="card">
+        <img src="img/KUROMI SEGUNDA VISTA.png">
+        <p>Modelado 3D de personaje con fondo y juego de iluminación.</p>
+     </article>
+     <article class="card">
+        <img src="img/KUROMI render tarea.png">
+        <p>Iluminación nocturna y segunda vista del personaje.</p>
+     </article>
+     <article class="card">
+        <img src="img/CASA.png">
+        <p>Modelado arquitectónico moderno.</p>
+     </article>
+     <article class="card">
+        <img src="img/Cartel de Contaminacion.png">
+        <p>Cartel de conciencia ambiental.</p>
+     </article>
+     <article class="card">
+        <img src="img/Cartel tortuga 2.png">
+        <p>Segunda vista del cartel de conciencia ambiental.</p>
+     </article>
+     <article class="card">
+        <img src="img/Mar Render vista2.png">
+        <p>Escena marina para corto animado.</p>
+     </article>
+
+     <article class="card">
+        <img src="img/MAR vista3.png">
+        <p>Composición oceánica.</p>
+     </article>
+ 
+     <article class="card">
+        <img src="img/Delfin_Delsi.png">
+        <p>Composición.</p>
+     </article>
+     </div>
+    </section>
+
+</body>
+</html>

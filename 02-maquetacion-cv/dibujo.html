@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Dibujos - Alondra CV</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    padding: 20px;
+    background: linear-gradient(180deg, rgb(151, 46, 204), rgb(80, 20, 120));
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+/* BOTÓN FIJO */
+.btn-volver {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    padding: 10px 18px;
+    border: 2px solid white;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+    z-index: 1000;
+}
+
+.btn-volver:hover {
+    background: white;
+    color: purple;
+}
+
+/* HEADER */
+.page-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* SUBNAV */
+.subnav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.subnav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 6px 12px;
+    border-radius: 7px;
+    transition: 0.3s;
+}
+
+.subnav a:hover {
+    background: rgb(6, 6, 6);
+    color: purple;
+}
+
+/* GALERÍA */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* TARJETAS */
+.card {
+    background: rgba(210, 195, 195, 0.25);
+    border-radius: 16px;
+    overflow: hidden;
+    padding-bottom: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* TEXTO */
+.card p {
+    padding: 10px;
+    font-size: 0.9rem;
+}
+
+/* HOVER */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+.card:hover img {
+    transform: scale(1.05);
+}
+
+/* SECCIONES */
+section {
+    margin-bottom: 40px;
+}
+
+h3 {
+    margin-bottom: 15px;
+}
+</style>
+</head>
+
+<body>
+
+<a href="index.html" class="btn-volver">Volver al menú</a>
+
+<div class="page-header">
+    <h1>Dibujos</h1>
+</div>
+
+<section id="Dibujos">
+
+<nav class="subnav">
+    <ul>
+        <li><a href="#MiniComic">Mini Comic</a></li>
+        <li><a href="#DibujoDigital">Dibujo Digital</a></li>
+        <li><a href="#DibujoTradicional">Dibujo Tradicional</a></li>
+    </ul>
+</nav>
+
+<!-- MINI COMIC -->
+<section id="MiniComic">
+<h3>Mini Comic</h3>
+<p>Trabajo de boceto, color y renderizado en el mini comic <strong>HOLLOW KNIGHT El Viaje De La Flor Delicada</strong>.</p>
+
+<div class="gallery">
+<div class="card">
+<img src="img/VIÑETA_1.png">
+</div>
+
+<div class="card">
+<img src="img/VIÑETA_2.png">
+</div>
+
+<div class="card">
+<img src="img/VIÑETA_3.png">
+</div>
+
+<div class="card">
+<img src="img/VIÑETA_4.png">
+</div>
+</div>
+</section>
+
+<!-- DIBUJO DIGITAL -->
+<section id="DibujoDigital">
+<h3>Dibujo Digital</h3>
+
+<div class="gallery">
+<div class="card">
+<img src="img/Personalizado.jpeg">
+<p>Personaje original para uso en proyectos de ilustración.</p>
+</div>
+
+<div class="card">
+<img src="img/background.png">
+<p>Fondo para el corto animado <strong>Una Caminata Tranquila</strong>.</p>
+</div>
+
+<div class="card">
+<img src="img/german_garcia.png">
+<p>Dibujo conceptual para proyecto de animación.</p>
+</div>
+</div>
+</section>
+
+<!-- DIBUJO TRADICIONAL -->
+<section id="DibujoTradicional">
+<h3>Dibujo Tradicional</h3>
+
+<div class="gallery">
+<div class="card">
+<img src="img/Comicion.jpeg">
+<p>Comisión de dibujo tradicional con lápices de colores para uso personal.</p>
+</div>
+
+<div class="card">
+<img src="img/Retrato.jpeg">
+<p>Retrato con técnicas de sombreado a lápiz.</p>
+</div>
+</div>
+</section>
+
+</section>
+
+</body>
+</html>
