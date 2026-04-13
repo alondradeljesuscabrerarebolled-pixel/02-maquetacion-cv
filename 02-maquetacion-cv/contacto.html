@@ -8,24 +8,26 @@
         body {
             margin: 0;
             padding: 0;
-            background: linear-gradient(180deg, rgb(151, 46, 204), rgb(80, 20, 120));
+            position: relative;
+            overflow-x: hidden;
+            background: linear-gradient(to bottom, #c86bff, #6a00b3, #3b007a);
             font-family: Arial, Helvetica, sans-serif;
         }
         .btn-volver {
           display: inline-block;
           margin-bottom: 20px;
-       padding: 10px 18px;
-    border: 2px solid rgb(230, 219, 237);
-    border-radius: 10px;
-    color: rgb(250, 248, 250);
-    text-decoration: none;
-    transition: 0.3s;
-}
+          padding: 10px 18px;
+          border: 2px solid rgb(230, 219, 237);
+          border-radius: 10px;
+         color: rgb(250, 248, 250);
+         text-decoration: none;
+          transition: 0.3s;
+      }
 
-       .btn-volver:hover {
-    background: white;
-    color: purple;
-}
+      .btn-volver:hover {
+          background: white;
+          color: purple;
+        }
 
         #Modelado3D {
             background-color: 0;
@@ -75,13 +77,13 @@
           box-shadow: 0 10px 25px rgba(0,0,0,0.4);
         }
 
-/* ZOOM SOLO A LA IMAGEN */
-.card:hover img {
-    transform: scale(1.1);
-} 
-.card:nth-child(5) {
-    grid-column: span 2;
-}
+          /* ZOOM SOLO A LA IMAGEN */
+        .card:hover img {
+          transform: scale(1.1);
+        } 
+        .card:nth-child(5) {
+           grid-column: span 2;
+         }
         #Modelado3D .gallery img {
             width: 100%;
             height: 220px;
@@ -99,9 +101,72 @@
             grid-column: span 2;
             height: 300px;
         }
+
+        /* ===== DECORACIONES ===== */
+        .decor{
+            position: fixed;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        /* ESTRELLAS */
+        .estrella1{
+            width: 320px;
+            position: fixed;
+            top: 280px;
+            left: 80px;
+            transform: rotate(-30deg);
+            z-index: -1;
+            filter: drop-shadow(0 0 6px black);
+            opacity: 0.6;
+        }
+
+        .estrella2{
+            width: 60px;
+            top: 140px;
+            left: 360px;
+            opacity: 0.5;
+        }
+
+        .estrella3{
+            width: 140px;
+            top: 100px;
+            right: 80px;
+            opacity: 0.5;
+        }
+
+        .estrella4{
+            width: 180px;
+            bottom: 60px;
+            right: 120px;
+            transform: rotate(15deg);
+            opacity: 0.5;
+        }
+
+        /* TEXTURAS */
+        .textura1{
+            width: 260px;
+            top: 80px;
+            right: 0;
+            opacity: 0.3;
+        }
+
+        .textura2{
+            width: 260px;
+            bottom: 0;
+            left: 0;
+            opacity: 0.3;
+        }
     </style>
 </head>
 <body>
+    <!-- DECORACIONES -->
+    <img src="img/estrella.png" class="decor estrella1" alt="Estrella grande izquierda">
+    <img src="img/estrellapng" class="decor estrella2" alt="Estrella pequeña arriba">
+    <img src="img/estrella.png" class="decor estrella3" alt="Estrella derecha">
+    <img src="img/estrella.png" class="decor estrella4" alt="Estrella abajo">
+    <img src="img/textura_fondo.png" class="decor textura1" alt="Textura derecha">
+    <img src="img/textura_fondo.png" class="decor textura2" alt="Textura inferior izquierda">
     <a href="index.html" class="btn-volver">Volver al menú</a>
     <section id="Modelado3D">
         <h2>Modelados 3D</h2>

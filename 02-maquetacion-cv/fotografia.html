@@ -10,7 +10,9 @@
       body {
        margin: 0;
        padding: 20px;
-       background: linear-gradient(180deg, rgb(151, 46, 204), rgb(80, 20, 120));
+       position: relative;
+       overflow-x: hidden;
+       background: linear-gradient(to bottom, #c86bff, #6a00b3, #3b007a);
        font-family: 'Poppins', sans-serif;
        color: white;
       }
@@ -128,10 +130,74 @@ h3 {
     height: auto;         /* mantiene proporción natural */
     object-fit: contain;  /* no se recorta */
 }
+
+/* ===== DECORACIONES ===== */
+.decor{
+    position: fixed;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* ESTRELLAS */
+.estrella1{
+    width: 320px;
+    position: fixed;
+    top: 280px;
+    left: 80px;
+    transform: rotate(-30deg);
+    z-index: -1;
+    filter: drop-shadow(0 0 6px black);
+    opacity: 0.6;
+}
+
+.estrella2{
+    width: 60px;
+    top: 140px;
+    left: 360px;
+    opacity: 0.5;
+}
+
+.estrella3{
+    width: 140px;
+    top: 100px;
+    right: 80px;
+    opacity: 0.5;
+}
+
+.estrella4{
+    width: 180px;
+    bottom: 60px;
+    right: 120px;
+    transform: rotate(15deg);
+    opacity: 0.5;
+}
+
+/* TEXTURAS */
+.textura1{
+    width: 260px;
+    top: 80px;
+    right: 0;
+    opacity: 0.3;
+}
+
+.textura2{
+    width: 260px;
+    bottom: 0;
+    left: 0;
+    opacity: 0.3;
+}
 </style>
 </head>
 
 <body>
+
+<!-- DECORACIONES -->
+<img src="img/estrella.png" class="decor estrella1" alt="Estrella grande izquierda">
+<img src="img/estrella.png" class="decor estrella2" alt="Estrella pequeña arriba">
+<img src="img/estrella.png" class="decor estrella3" alt="Estrella derecha">
+<img src="img/estrella.png" class="decor estrella4" alt="Estrella abajo">
+<img src="img/textura_fondo.png" class="decor textura1" alt="Textura derecha">
+<img src="img/textura_fondo.png" class="decor textura2" alt="Textura inferior izquierda">
 
 <a href="index.html" class="btn-volver">Volver al menú</a>
 
